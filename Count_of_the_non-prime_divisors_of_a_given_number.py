@@ -1,16 +1,13 @@
 n=int(input())
+c=0
 l=[]
-r=[]
-p=0
 for i in range(1,n+1):
     if n%i==0:
         l.append(i)
-for j in l:
-    if j>2:
-        for k in range(2,j):
-            if j%k==0:
-                r.append(j)
+for i in l:
+    if i!=1 or i!=2:
+        for j in range(2,i):
+            if i%j==0:
+                c+=1
                 break
-print(len(r)+1)
-        
-    
+print(c+1)
